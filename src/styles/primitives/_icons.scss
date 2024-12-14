@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../../public/assets/icons/icomoon.eot?f7c74o');
+  src:  url('../../../public/assets/icons/icomoon.eot?f7c74o#iefix') format('embedded-opentype'),
+  url('../../../public/assets/icons/icomoon.ttf?f7c74o') format('truetype'),
+  url('../../../public/assets/icons/icomoon.woff?f7c74o') format('woff'),
+  url('../../../public/assets/icons/icomoon.svg?f7c74o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e904";
+}
+.icon-arrow-down:before {
+  content: "\e900";
+}
+.icon-attach:before {
+  content: "\e901";
+}
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-check-In:before {
+  content: "\e903";
+}
+.icon-check-mark:before {
+  content: "\e905";
+}
+.icon-download:before {
+  content: "\e906";
+}
+.icon-Info:before {
+  content: "\e908";
+}
+.icon-location:before {
+  content: "\e909";
+}
+.icon-survey-date:before {
+  content: "\e90a";
+}
+.icon-target-met:before {
+  content: "\e910";
+}
