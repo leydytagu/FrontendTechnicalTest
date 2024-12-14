@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+///// FUNDAMENTALS /////
+
+// Base
+@import 'styles/base/reset';
+@import 'styles/base/normalize';
+@import 'styles/base/mixins';
+
+// Primitives
+@import 'styles/primitives/colors';
+@import 'styles/primitives/typography';
+@import 'styles/primitives/breakpoints';
+
+// Primitives
+@import 'styles/base/global';

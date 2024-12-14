@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GroupInfoComponent } from "../../design-system/organisms/group-info/group-info.component";
+import { GroupInfoComponent } from "../../shared/design-system/organisms/group-info/group-info.component";
 
 @Component({
   selector: 'app-landing',

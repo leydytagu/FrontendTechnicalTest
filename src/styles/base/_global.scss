@@ -1,0 +1,11 @@
+body {
+  font-family: var(--font-family-primary), sans-serif;
+  font-size: toRem(16);
+  background: var(--color-gray-50);
+  color: var(--color-black-600);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
