@@ -1,0 +1,9 @@
+<div class="info-date">
+  <div class="info-date__img">
+    <img [ngSrc]="img" width="16" height="16" alt="">
+  </div>
+  <div class="info-date__content">
+    <p *ngIf="hasImg">{{title}}</p>
+    <strong *ngIf="hasDescription">{{description}}</strong>
+  </div>
+</div>

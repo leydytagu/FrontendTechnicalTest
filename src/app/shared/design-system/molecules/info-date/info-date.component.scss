@@ -1,0 +1,26 @@
+@import '../../../../../styles/base/mixins';
+
+.info-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &__img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-magenta-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 16px;
+    }
+  }
+  &__content {
+    font-size: toRem(14);
+    strong {
+      display: block;
+      font-weight: 700;
+    }
+  }
+}
