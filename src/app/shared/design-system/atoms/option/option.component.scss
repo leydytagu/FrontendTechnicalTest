@@ -1,0 +1,35 @@
+.option {
+  background: var(--color-magenta-500);
+  color: var(--color-white-700);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: relative;
+  &__content-img {
+    background: var(--color-white-700);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4px;
+    img {
+      width: 22px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 14px solid var(--color-magenta-500);
+  }
+}

@@ -3,6 +3,8 @@ import { GroupInfoComponent } from "./components/group-info/group-info.component
 import { AccordionComponent } from '../../shared/design-system/molecules/accordion/accordion.component';
 import { ISurveyTagsComponentProps, SurveyTagsComponent } from './components/survey-tags/survey-tags.component';
 import { AccordionHeadComponent, IAccordionHeadComponent } from './components/accordion-head/accordion-head.component';
+import { OptionComponent } from '../../shared/design-system/atoms/option/option.component';
+import { GroupCardComponent } from './components/group-card/group-card.component';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +13,9 @@ import { AccordionHeadComponent, IAccordionHeadComponent } from './components/ac
     GroupInfoComponent,
     AccordionComponent,
     SurveyTagsComponent,
-    AccordionHeadComponent
+    AccordionHeadComponent,
+    OptionComponent,
+    GroupCardComponent
   ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

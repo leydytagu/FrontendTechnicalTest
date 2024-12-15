@@ -1,0 +1,8 @@
+<div class="option">
+  <div class="option__content">
+    <div class="option__content-img" *ngIf="hasImg">
+      <img [ngSrc]="img" width="22" height="22" alt="">
+    </div>
+    <p *ngIf="hasText">{{text}}</p>
+  </div>
+</div>
