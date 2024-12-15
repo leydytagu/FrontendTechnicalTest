@@ -1,0 +1,13 @@
+<div class="list">
+  <div class="list__left">
+    <div class="list__number" *ngIf="hasListNumber">{{listNumber}}</div>
+    <p class="list__text" *ngIf="hasText">{{text}}</p>
+  </div>
+  <div *ngIf="hasButtonIcon" class="list__right">
+    <app-tooltip [text]="tooltip">
+      <button type="button">
+        <i class="{{buttonIcon}}"></i>
+      </button>
+    </app-tooltip>
+  </div>
+</div>

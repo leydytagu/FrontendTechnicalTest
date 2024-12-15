@@ -1,0 +1,14 @@
+.survey-detail {
+  padding: 30px 50px;
+  background: var(--color-gray);
+  ul {
+    list-style: none;
+    margin-top: 30px;
+    li {
+      margin-top: 30px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
