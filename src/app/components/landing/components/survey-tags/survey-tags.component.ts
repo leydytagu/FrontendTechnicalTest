@@ -12,7 +12,7 @@ export interface ISurveyTagsComponentProps {
     description?: string;
   },
   tag?: {
-    type?: 'met' | 'not-met',
+    color?: 'red' | 'magenta',
     img?: string;
     text: string;
   },

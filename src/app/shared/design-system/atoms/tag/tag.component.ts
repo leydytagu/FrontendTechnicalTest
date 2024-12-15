@@ -15,7 +15,7 @@ export class TagComponent {
   @Input() text = '';
   @Input() icon = '';
   @Input() image = '';
-  @Input() type : 'met' | 'not-met' = 'met';
+  @Input() color : 'red' | 'magenta' = 'red';
 
   get hasText(): boolean {
     return !!this.text;

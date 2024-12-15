@@ -31,7 +31,7 @@ export class LandingComponent {
     tag: {
       img: 'assets/imgs/target.svg',
       text: 'Target Not Met',
-      type: 'not-met'
+      color: 'red'
     },
     target: {
       text: '10 of 12',

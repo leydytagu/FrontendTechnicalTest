@@ -5,5 +5,18 @@
     title="Planned Check-In Survey Date"
     description="March 11, 2024"
   ></app-info-date>
+  <div class="survey-collection__counts">
+    <app-count-tooltip
+      text="10"
+      [label]="count.label"
+      [tooltip]="count.tooltip"
+    ></app-count-tooltip>
+    <app-count-tooltip
+      text="10"
+      textColor="gray"
+      [label]="count.label"
+      [tooltip]="count.tooltip"
+    ></app-count-tooltip>
+  </div>
   <app-progress-bar [progress]="50" color="red"></app-progress-bar>
 </div>

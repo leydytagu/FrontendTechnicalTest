@@ -5,12 +5,12 @@
   display: flex;
   align-items: stretch;
   background: var(--color-gray-100);
-  &.met {
+  &.magenta {
     .target__icon {
       background: var(--color-magenta-500);
     }
   }
-  &.not-met {
+  &.red {
     .target__icon {
       background: var(--color-red-500);
     }

@@ -4,5 +4,10 @@
   justify-content: stretch;
   &__content {
     flex: 1;
+    &-children {
+      display: flex;
+      align-items: center;
+      justify-content: stretch;
+    }
   }
 }

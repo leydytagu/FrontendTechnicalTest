@@ -3,6 +3,11 @@
   &__title {
     margin-bottom: 14px;
   }
+  &__counts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
   app-info-date {
     margin-bottom: 50px;
     display: block;

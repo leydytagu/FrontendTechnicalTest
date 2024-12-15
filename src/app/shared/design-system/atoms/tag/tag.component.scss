@@ -17,10 +17,10 @@
   p {
     font-weight: 700;
   }
-  &.met {
+  &.magenta {
     background: var(--color-magenta-500);
   }
-  &.not-met {
+  &.red {
     background: var(--color-red-500);
   }
 }

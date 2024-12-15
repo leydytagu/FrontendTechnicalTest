@@ -13,7 +13,7 @@ import { NgIf } from '@angular/common';
 export class TargetComponent {
   @Input() text = '';
   @Input() icon = '';
-  @Input() type : 'met' | 'not-met' = 'met';
+  @Input() color : 'red' | 'magenta' = 'red';
 
   get hasText(): boolean {
     return !!this.text;

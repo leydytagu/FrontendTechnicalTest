@@ -1,0 +1,95 @@
+@import '../../../../../styles/base/mixins';
+
+.count-tooltip {
+  position: relative;
+  &.show-tooltip {
+    .count-tooltip__info {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
+  }
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: toRem(14);
+    background: var(--color-gray-300);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-gray-700);
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  strong {
+    font-size: toRem(60);
+    font-weight: 600;
+    &.gray {
+      color: var(--color-gray-500);
+    }
+  }
+  &__info {
+    min-width: 322px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--color-black-500);
+    box-shadow: 0 3px 7px 0 rgba(67, 71, 79, 0.30);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-white);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: .3s;
+    &-head {
+      padding: 12px 16px;
+      background: var(--color-black-600);
+      font-size: toRem(14);
+      position: relative;
+      button {
+        cursor: pointer;
+        position: absolute;
+        font-size: toRem(18);
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        color: var(--color-gray-500);
+        border: none;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-transform: uppercase;
+        font-weight: 700;
+        span {
+          display: flex;
+          padding: 3px;
+          border-radius: 3px;
+          background: var(--color-black-100);
+          color: var(--color-white-700);
+          &.blue {
+            background: var(--color-azure-500);
+          }
+          i {
+            font-size: toRem(12);
+          }
+        }
+      }
+    }
+    &-content {
+      padding: 12px 16px;
+      font-size: toRem(13);
+    }
+  }
+}

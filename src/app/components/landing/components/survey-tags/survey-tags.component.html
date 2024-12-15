@@ -11,7 +11,7 @@
     <div class="survey-tags__content">
       <app-tag [image]="surveyTags?.tag?.img || ''"
                [text]="surveyTags?.tag?.text || ''"
-               [type]="surveyTags?.tag?.type || 'met'"
+               [color]="surveyTags?.tag?.color || 'red'"
                *ngIf="hasTag"
                class="flex-1"
       ></app-tag>
