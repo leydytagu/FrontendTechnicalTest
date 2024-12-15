@@ -1,17 +1,43 @@
 import { Component } from '@angular/core';
-import { GroupInfoComponent } from "../../shared/design-system/organisms/group-info/group-info.component";
+import { GroupInfoComponent } from "./components/group-info/group-info.component";
 import { AccordionComponent } from '../../shared/design-system/molecules/accordion/accordion.component';
+import { ISurveyTagsComponentProps, SurveyTagsComponent } from './components/survey-tags/survey-tags.component';
+import { AccordionHeadComponent, IAccordionHeadComponent } from './components/accordion-head/accordion-head.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
     GroupInfoComponent,
-    AccordionComponent
+    AccordionComponent,
+    SurveyTagsComponent,
+    AccordionHeadComponent
   ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
+
+  public survey:ISurveyTagsComponentProps  = {
+    img: './assets/imgs/Check-In.svg',
+    head: {
+      title: 'Check-In Surveys',
+      description: 'March 11, 2024'
+    },
+    tag: {
+      img: 'assets/imgs/target.svg',
+      text: 'Target Not Met',
+      type: 'not-met'
+    },
+    target: {
+      text: '10 of 12',
+      tooltip: 'response target',
+      icon: 'icon-target-met'
+    }
+  }
+
+  public data: IAccordionHeadComponent = {
+    surveyTags: this.survey
+  }
 
 }

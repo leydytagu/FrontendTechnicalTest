@@ -1,0 +1,24 @@
+@import '../../../../../styles/base/mixins';
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  background: var(--color-gray-300);
+  i {
+    font-size: 1rem;
+    color: var(--color-gray-500);
+  }
+  p {
+    text-transform: uppercase;
+    font-size: toRem(14);
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

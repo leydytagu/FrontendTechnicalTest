@@ -1,0 +1,43 @@
+@import '../../../../../styles/base/mixins';
+
+.survey-tags {
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &.met {
+    .survey-tags__head small {
+      background: var(--color-magenta-500);
+    }
+  }
+  &__wrapper {
+    max-width: 295px;
+    flex: 1;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: toRem(14);
+    margin-bottom: 4px;
+    small {
+      background: var(--color-gray-500);
+      display: inline-block;
+      height: 8px;
+      width: 2px;
+      border-radius: 3px;
+    }
+    strong {
+      display: inline-block;
+      font-weight: 700;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}

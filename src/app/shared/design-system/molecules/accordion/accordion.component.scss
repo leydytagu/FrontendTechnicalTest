@@ -4,13 +4,18 @@
   border-radius: 8px;
   &__head {
     display: flex;
+    align-items: stretch;
     &-content {
       flex: 1;
       border-right: 1px solid var(--color-gray-350);
     }
+    app-tooltip {
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+    }
     &-button {
       position: relative;
-      height: 100%;
       border: none;
       padding: 25px 0;
       width: 80px;
@@ -30,7 +35,8 @@
         top: -1px;
         z-index: 1;
         border-radius: 0 8px 8px 0;
-        transition: .3s;
+        background: transparent;
+        transition: .3s background-color, .5s border-radius;
       }
       i {
         position: relative;

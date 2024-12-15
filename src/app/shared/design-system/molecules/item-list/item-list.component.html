@@ -1,0 +1,5 @@
+<div class="item-list">
+  <i *ngIf="hasIcon" class="{{icon}}"></i>
+  <img *ngIf="hasImage" [ngSrc]="image" alt="" width="16" height="16">
+  <p *ngIf="hasText">{{text}}</p>
+</div>

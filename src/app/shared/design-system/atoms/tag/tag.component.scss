@@ -1,0 +1,26 @@
+@import '../../../../../styles/base/mixins';
+
+.tag {
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: var(--color-white-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  img {
+    width: 16px;
+  }
+  i {
+    font-size: 16px;
+  }
+  p {
+    font-weight: 700;
+  }
+  &.met {
+    background: var(--color-magenta-500);
+  }
+  &.not-met {
+    background: var(--color-red-500);
+  }
+}

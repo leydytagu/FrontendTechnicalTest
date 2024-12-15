@@ -1,0 +1,30 @@
+.target {
+  border-radius: 4px;
+  overflow: hidden;
+  color: var(--color-gray-600);
+  display: flex;
+  align-items: stretch;
+  background: var(--color-gray-100);
+  &.met {
+    .target__icon {
+      background: var(--color-magenta-500);
+    }
+  }
+  &.not-met {
+    .target__icon {
+      background: var(--color-red-500);
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 4px 5px;
+    color: var(--color-white-700);
+  }
+  &__text {
+    padding: 4px 6px;
+    font-weight: 600;
+  }
+}

@@ -3,13 +3,15 @@
     <div class="accordion__head-content">
       <ng-content select="[head]"></ng-content>
     </div>
-    <button
-      type="button"
-      class="accordion__head-button"
-      (click)="toggle()"
-    >
-      <i class="icon-arrow-down"></i>
-    </button>
+    <app-tooltip [text]="tooltip">
+      <button
+        type="button"
+        class="accordion__head-button"
+        (click)="toggle()"
+      >
+        <i class="icon-arrow-down"></i>
+      </button>
+    </app-tooltip>
   </div>
   <div class="accordion__content">
     <div class="accordion__content-expander">

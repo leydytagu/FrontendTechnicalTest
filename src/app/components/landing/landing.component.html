@@ -1,7 +1,9 @@
-<section class="wrapper">
-  <app-accordion>
+<section class="landing">
+  <app-accordion tooltip="Show Details">
     <div head>
-      head
+      <div class="flex align-center justify-stretch">
+        <app-accordion-head [props]="data"></app-accordion-head>
+      </div>
     </div>
     <div content>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae doloribus, eaque facere ipsum laboriosam magnam nostrum numquam officiis perferendis praesentium quidem sapiente similique sint sunt totam vero, voluptatem voluptatum.

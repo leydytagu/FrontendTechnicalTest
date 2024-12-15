@@ -1,0 +1,23 @@
+<div class="survey-tags">
+  <div *ngIf="hasImg">
+    <img [ngSrc]="surveyTags?.img || ''" width="24" height="24" alt="">
+  </div>
+  <div class="survey-tags__wrapper">
+    <div class="survey-tags__head">
+      <strong>{{surveyTags?.head?.title}}</strong>
+      <small *ngIf="surveyTags?.head?.description"></small>
+      <p  *ngIf="surveyTags?.head?.description">{{surveyTags?.head?.description}}</p>
+    </div>
+    <div class="survey-tags__content">
+      <app-tag [image]="surveyTags?.tag?.img || ''"
+               [text]="surveyTags?.tag?.text || ''"
+               [type]="surveyTags?.tag?.type || 'met'"
+               *ngIf="hasTag"
+               class="flex-1"
+      ></app-tag>
+      <app-tooltip [text]="surveyTags?.target?.tooltip || ''" *ngIf="hasTarget">
+        <app-target [icon]="surveyTags?.target?.icon || ''" [text]="surveyTags?.target?.text || ''"></app-target>
+      </app-tooltip>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@import '../../../../../styles/base/mixins';
+
+.tooltip {
+  position: relative;
+  cursor: default;
+  display: flex;
+  height: 100%;
+  &__text {
+    position: absolute;
+    padding: 10px;
+    font-size: toRem(14);
+    font-weight: 500;
+    bottom: 0;
+    left: 50%;
+    background: var(--color-black-white-black);
+    color: var(--color-white-700);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transform: translate(-50%, 120%);
+    border-radius: 6px;
+    transition: .3s;
+    white-space: nowrap;
+  }
+  &:hover {
+    .tooltip__text {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+      transform: translate(-50%, 110%);
+    }
+  }
+}

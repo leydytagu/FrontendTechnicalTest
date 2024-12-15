@@ -1,0 +1,16 @@
+@import '../../../../../styles/base/mixins';
+
+.group-info {
+  background: var(--color-gray);
+  padding: 32px;
+  &__name {
+    font-size: toRem(20);
+    font-weight: 700;
+    line-height: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

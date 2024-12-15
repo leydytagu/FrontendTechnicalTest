@@ -1,0 +1,10 @@
+.accordion-head {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  border-radius: 8px;
+  overflow: hidden;
+  app-group-info {
+    border-right: 1px solid var(--color-gray-350);
+  }
+}

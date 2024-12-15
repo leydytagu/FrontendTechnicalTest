@@ -12,3 +12,28 @@
 
 // Primitives
 @import 'styles/base/global';
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.block {
+  display: block;
+}
+
