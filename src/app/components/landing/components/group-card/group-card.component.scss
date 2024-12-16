@@ -1,13 +1,43 @@
+@import '../../../../../styles/primitives/breakpoints';
+
 .group-card {
   display: flex;
-  align-items: center;
-  justify-content: stretch;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 0 0 7px 7px;
+  app-option {
+    display: flex;
+  }
   &__content {
     flex: 1;
     &-children {
       display: flex;
-      align-items: center;
-      justify-content: stretch;
+      width: 100%;
+      align-items: stretch;
+      app-survey-collection,
+      app-survey-detail {
+        flex: 1;
+        display: flex;
+      }
+      app-survey-detail {
+        border-left: 1px solid var(--color-gray-350);
+      }
     }
   }
 }
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .group-card {
+    &__content {
+      flex: 1;
+      &-children {
+        flex-direction: column;
+        app-survey-detail {
+          border-right: none;
+          border-top: 1px solid var(--color-gray-350);
+        }
+      }
+    }
+  }
+}
+
