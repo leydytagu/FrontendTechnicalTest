@@ -1,47 +1,30 @@
-import { Component } from '@angular/core';
-import { GroupInfoComponent } from "./components/group-info/group-info.component";
+import { Component, OnInit } from '@angular/core';
+import { GroupFacade } from '../../core/facades/group.facade';
+import { mapGroups } from '../../core/mappers/group.mapper';
+import { IGroup } from '../../core/models/group.model';
 import { AccordionComponent } from '../../shared/design-system/molecules/accordion/accordion.component';
-import { ISurveyTagsComponentProps, SurveyTagsComponent } from './components/survey-tags/survey-tags.component';
-import { AccordionHeadComponent, IAccordionHeadComponent } from './components/accordion-head/accordion-head.component';
-import { OptionComponent } from '../../shared/design-system/atoms/option/option.component';
+import { AccordionHeadComponent } from './components/accordion-head/accordion-head.component';
 import { GroupCardComponent } from './components/group-card/group-card.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
-    GroupInfoComponent,
     AccordionComponent,
-    SurveyTagsComponent,
     AccordionHeadComponent,
-    OptionComponent,
     GroupCardComponent
   ],
+  providers: [GroupFacade],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
 
-  public survey:ISurveyTagsComponentProps  = {
-    img: './assets/imgs/Check-In.svg',
-    head: {
-      title: 'Check-In Surveys',
-      description: 'March 11, 2024'
-    },
-    tag: {
-      img: 'assets/imgs/target.svg',
-      text: 'Target Not Met',
-      color: 'red'
-    },
-    target: {
-      text: '10 of 12',
-      tooltip: 'response target',
-      icon: 'icon-target-met'
-    }
+  public groups: IGroup[] = [];
+
+  constructor(private facade: GroupFacade) {}
+
+  ngOnInit(): void {
+    this.facade.getGroups().subscribe(groups => this.groups = mapGroups(groups))
   }
-
-  public data: IAccordionHeadComponent = {
-    surveyTags: this.survey
-  }
-
 }

@@ -1,13 +1,16 @@
 <section class="landing">
-  <app-accordion tooltip="Show Details">
-    <div head>
-      <div class="flex align-center justify-stretch">
-        <app-accordion-head [props]="data"></app-accordion-head>
+  @for (group of groups; track group.id) {
+    <app-accordion tooltip="Show Details" alternativeTooltip="Hide Details">
+      <div head>
+        <div class="flex align-center justify-stretch">
+          <app-accordion-head [props]="group.headData"></app-accordion-head>
+        </div>
       </div>
-    </div>
-    <div content>
-      <app-group-card></app-group-card>
-    </div>
-  </app-accordion>
-  <app-group-info></app-group-info>
+      <div content>
+        <app-group-card></app-group-card>
+      </div>
+    </app-accordion>
+  } @empty {
+    <li>There are no items.</li>
+  }
 </section>
