@@ -22,6 +22,12 @@ export interface IGroupInfo {
   date: string;
 }
 
+export interface ISurveyAdministrationDetail {
+  surveyLink: string;
+  backupSurveys: string;
+  surveyAdminKit: string;
+}
+
 export interface ISurveyCollection {
   date: string;
   validResponses: {
@@ -58,6 +64,7 @@ export interface ISurveyCollection {
 
 export interface IContentData {
   surveyCollection: ISurveyCollection
+  surveyAdministrationDetail: ISurveyAdministrationDetail
 }
 
 export interface IAccordionHead {

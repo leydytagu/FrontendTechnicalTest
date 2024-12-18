@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ISurveyAdministrationDetail } from '../../../../core/models/group.model';
 import { ListComponent } from '../../../../shared/design-system/molecules/list/list.component';
 
 @Component({
@@ -11,7 +12,5 @@ import { ListComponent } from '../../../../shared/design-system/molecules/list/l
   styleUrl: './survey-detail.component.scss'
 })
 export class SurveyDetailComponent {
-  public list = {
-
-  }
+  @Input() surveyDetail!: ISurveyAdministrationDetail;
 }

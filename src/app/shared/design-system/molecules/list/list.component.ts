@@ -1,6 +1,6 @@
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TooltipComponent } from '../../atoms/tooltip/tooltip.component';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-list',
@@ -17,8 +17,9 @@ export class ListComponent {
   @Input() listNumber: string = '';
   @Input() tooltip: string = '';
   @Input() buttonIcon: string = '';
-  @Input() textCopy: string = '';
+  @Input() textCopyAction: string = '';
   @Input() delayCopy: number = 5000;
+  @Input() actionLink: string = '';
 
   private _showCopy = false;
 
@@ -35,7 +36,11 @@ export class ListComponent {
   }
 
   get hasTextCopy(): boolean {
-    return !!this.textCopy;
+    return !!this.textCopyAction && !!this.actionLink;
+  }
+
+  get hasTextActionLink(): boolean {
+    return !!this.actionLink;
   }
 
   get showCopy(): boolean {
@@ -44,11 +49,23 @@ export class ListComponent {
 
   public clickButton(): void {
     if (this.hasTextCopy) {
+      navigator.clipboard.writeText(this.actionLink).then(
+        () => {
+          this._showCopy = true;
+          setTimeout(() => {
+            this._showCopy = false;
+          }, this.delayCopy);
+        }
+      );
       this._showCopy = true;
       setTimeout(() => {
         this._showCopy = false;
       }, this.delayCopy);
+    } else if (this.hasTextActionLink) {
+      const link = document.createElement('a');
+      link.href = this.actionLink;
+      link.target = '_blank';
+      link.click();
     }
   }
-
 }

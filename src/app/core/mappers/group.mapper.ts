@@ -106,6 +106,11 @@ export const mapGroups = (groups: Group[]): IGroup[] => {
             percentage: Math.floor(group.valid_responses * 100 / group.response_target),
             color: progressBarColor()
           }
+        },
+        surveyAdministrationDetail: {
+          surveyLink: group.survey_link,
+          backupSurveys: group.backup_surveys,
+          surveyAdminKit: group.survey_admin_kit
         }
       }
     }

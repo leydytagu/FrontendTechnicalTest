@@ -5,10 +5,29 @@
       <li>
         <app-list
           text="Print and Review Survey Admin Kit"
-          tooltip="Copy Link"
+          tooltip="Download"
           listNumber="1"
           buttonIcon="icon-download"
-          textCopy="Link Copied"
+          [actionLink]="surveyDetail.surveyAdminKit"
+        ></app-list>
+      </li>
+      <li>
+        <app-list
+          text="Print Backup Surveys"
+          tooltip="Download"
+          listNumber="2"
+          buttonIcon="icon-download"
+          [actionLink]="surveyDetail.backupSurveys"
+        ></app-list>
+      </li>
+      <li>
+        <app-list
+          text="Share Survey Link"
+          tooltip="Copy Link"
+          listNumber="3"
+          buttonIcon="icon-attach"
+          textCopyAction="Link Copied"
+          [actionLink]="surveyDetail.surveyLink"
         ></app-list>
       </li>
     </ul>
