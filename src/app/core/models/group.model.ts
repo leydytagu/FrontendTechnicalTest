@@ -1,4 +1,4 @@
-import { ISurveyTagsComponentProps } from '../../components/landing/components/survey-tags/survey-tags.component';
+import { ISurveyTagsComponentProps } from '../../pages/landing/components/survey-tags/survey-tags.component';
 import { EProgressBarColor, EResponseColor, ETooltipColor } from './group.enum';
 
 export interface Group {
