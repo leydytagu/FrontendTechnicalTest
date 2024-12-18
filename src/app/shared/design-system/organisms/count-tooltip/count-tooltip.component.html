@@ -4,15 +4,15 @@
   <div *ngIf="hasTooltip" class="count-tooltip__info">
     <div class="count-tooltip__info-head">
       <p>
-        <span class="{{tooltip?.colorIcon}}">
+        <span class="{{tooltip.colorIcon}}">
           <i class="icon-Info"></i>
         </span>
-        {{tooltip?.title}}
+        {{tooltip.title}}
       </p>
       <button type="button" (click)="toggleTooltip()"><i class="icon-close"></i></button>
     </div>
     <div class="count-tooltip__info-content">
-      <p>{{tooltip?.description}}</p>
+      <p>{{tooltip.description}}</p>
     </div>
   </div>
 </div>

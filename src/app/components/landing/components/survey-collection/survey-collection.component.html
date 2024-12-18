@@ -3,20 +3,24 @@
   <app-info-date
     img="./assets/imgs/SurveyDate.svg"
     title="Planned Check-In Survey Date"
-    description="March 11, 2024"
+    [description]="surveyCollection.date"
   ></app-info-date>
   <div class="survey-collection__counts">
     <app-count-tooltip
-      text="10"
-      [label]="count.label"
-      [tooltip]="count.tooltip"
+      [text]="surveyCollection.validResponses.quantity.toString()"
+      [label]="surveyCollection.validResponses.label"
+      [tooltip]="surveyCollection.validResponses.tooltip"
+      [textColor]="surveyCollection.validResponses.color"
     ></app-count-tooltip>
     <app-count-tooltip
-      text="10"
-      textColor="gray"
-      [label]="count.label"
-      [tooltip]="count.tooltip"
+      [text]="surveyCollection.responseTarget.quantity.toString()"
+      [label]="surveyCollection.responseTarget.label"
+      [tooltip]="surveyCollection.responseTarget.tooltip"
+      [textColor]="surveyCollection.responseTarget.color"
     ></app-count-tooltip>
   </div>
-  <app-progress-bar [progress]="50" color="red"></app-progress-bar>
+  <app-progress-bar
+    [progress]="surveyCollection.progressBar.percentage"
+    [color]="surveyCollection.progressBar.color">
+  </app-progress-bar>
 </div>

@@ -2,7 +2,7 @@
   <app-option text="Check-in" img="./assets/imgs/Check-In.svg"></app-option>
   <div class="group-card__content">
     <div class="group-card__content-children">
-      <app-survey-collection></app-survey-collection>
+      <app-survey-collection [surveyCollection]="props.surveyCollection"></app-survey-collection>
       <app-survey-detail></app-survey-detail>
     </div>
   </div>

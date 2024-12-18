@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { EResponseColor, ETooltipColor } from '../../../../core/models/group.model';
 
 @Component({
   selector: 'app-count-tooltip',
@@ -16,12 +17,12 @@ export class CountTooltipComponent {
     icon: string;
   } | null = null;
   @Input() text: string = '';
-  @Input() textColor: 'black' | 'gray' = 'black';
+  @Input() textColor: EResponseColor = EResponseColor.black;
   @Input() tooltip: {
     title: string;
     description: string;
-    colorIcon: 'gray' | 'blue'
-  } | null = null;
+    colorIcon: ETooltipColor
+  }
 
   public showTooltip: boolean = false;
 

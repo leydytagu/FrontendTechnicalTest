@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { EProgressBarColor } from '../../../../core/models/group.model';
 
 @Component({
   selector: 'app-progress-bar',
@@ -9,9 +10,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ProgressBarComponent {
   @Input() progress: number = 0;
-  @Input() color: 'red' | 'magenta' = 'red';
+  @Input() color: EProgressBarColor = EProgressBarColor.red;
 
-  get calcProgress():number {
+  get calcProgress(): number {
     return this.progress > 100 ? 100 : this.progress;
   }
 }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { InfoDateComponent } from '../../../../shared/design-system/molecules/info-date/info-date.component';
+import { Component, Input } from '@angular/core';
+import { ISurveyCollection } from '../../../../core/models/group.model';
 import { ProgressBarComponent } from '../../../../shared/design-system/atoms/progress-bar/progress-bar.component';
+import { InfoDateComponent } from '../../../../shared/design-system/molecules/info-date/info-date.component';
 import {
   CountTooltipComponent
 } from '../../../../shared/design-system/organisms/count-tooltip/count-tooltip.component';
@@ -17,15 +18,5 @@ import {
   styleUrl: './survey-collection.component.scss'
 })
 export class SurveyCollectionComponent {
-  public count = {
-    label: {
-      text: 'valid responses',
-      icon: 'icon-Info'
-    },
-    tooltip: {
-      title: 'valid responses',
-      colorIcon: 'blue' as any,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    }
-  }
+  @Input() surveyCollection!: ISurveyCollection;
 }

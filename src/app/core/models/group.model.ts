@@ -22,6 +22,44 @@ export interface IGroupInfo {
   date: string;
 }
 
+export interface ISurveyCollection {
+  date: string;
+  validResponses: {
+    quantity: number;
+    color: EResponseColor;
+    label: {
+      text: string;
+      icon: string;
+    };
+    tooltip: {
+      title: string;
+      colorIcon: ETooltipColor;
+      description: string;
+    }
+  };
+  responseTarget: {
+    quantity: number;
+    color: EResponseColor;
+    label: {
+      text: string;
+      icon: string;
+    }
+    tooltip: {
+      title: string;
+      colorIcon: ETooltipColor;
+      description: string;
+    }
+  };
+  progressBar: {
+    percentage: number;
+    color: EProgressBarColor;
+  };
+}
+
+export interface IContentData {
+  surveyCollection: ISurveyCollection
+}
+
 export interface IAccordionHead {
   groupInfo: IGroupInfo;
   surveyTags: ISurveyTagsComponentProps;
@@ -30,9 +68,25 @@ export interface IAccordionHead {
 export interface IGroup {
   id: number;
   headData: IAccordionHead;
+  contentData: IContentData;
 }
 
 export enum ESurveyTagColor {
+  magenta = 'magenta',
+  red = 'red'
+}
+
+export enum EResponseColor {
+  black = 'black',
+  gray = 'gray'
+}
+
+export enum ETooltipColor {
+  gray = 'gray',
+  blue = 'blue'
+}
+
+export enum EProgressBarColor {
   magenta = 'magenta',
   red = 'red'
 }
