@@ -1,6 +1,11 @@
 <div class="accordion-head">
-  <app-group-info class="flex-1"></app-group-info>
-  <app-survey-tags class="flex-1"
-                   [surveyTags]="props.surveyTags"
-  ></app-survey-tags>
+  <app-group-info
+    class="flex-1"
+    [info]="props.groupInfo">
+  </app-group-info>
+
+  <app-survey-tags
+    class="flex-1"
+    [surveyTags]="props.surveyTags">
+  </app-survey-tags>
 </div>

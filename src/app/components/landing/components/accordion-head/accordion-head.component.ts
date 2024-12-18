@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { IAccordionHead } from '../../../../core/models/group.model';
 import { GroupInfoComponent } from '../group-info/group-info.component';
-import { ISurveyTagsComponentProps, SurveyTagsComponent } from '../survey-tags/survey-tags.component';
-
-export interface IAccordionHeadComponent {
-  surveyTags: ISurveyTagsComponentProps;
-}
+import { SurveyTagsComponent } from '../survey-tags/survey-tags.component';
 
 @Component({
   selector: 'app-accordion-head',
@@ -12,10 +9,10 @@ export interface IAccordionHeadComponent {
 	imports: [
 		GroupInfoComponent,
 		SurveyTagsComponent
-	],
+  ],
   templateUrl: './accordion-head.component.html',
   styleUrl: './accordion-head.component.scss'
 })
 export class AccordionHeadComponent {
-  @Input() props!: IAccordionHeadComponent;
+  @Input() props!: IAccordionHead;
 }

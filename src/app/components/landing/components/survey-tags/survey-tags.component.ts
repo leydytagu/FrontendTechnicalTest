@@ -1,5 +1,6 @@
 import { NgIf, NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ESurveyTagColor, ESurveyTagText } from '../../../../core/models/group.model';
 
 import { TagComponent } from '../../../../shared/design-system/atoms/tag/tag.component';
 import { TargetComponent } from '../../../../shared/design-system/atoms/target/target.component';
@@ -11,10 +12,10 @@ export interface ISurveyTagsComponentProps {
     title: string;
     description?: string;
   },
-  tag?: {
-    color?: 'red' | 'magenta',
+  tag: {
+    color?: ESurveyTagColor,
     img?: string;
-    text: string;
+    text: ESurveyTagText;
   },
   target?: {
     icon?: string;
@@ -48,6 +49,6 @@ export class SurveyTagsComponent {
   }
 
   get hasTarget(): boolean {
-    return !!this.surveyTags?.target;
+    return this.surveyTags?.tag?.text !== ESurveyTagText.no_responses_collected;
   }
 }

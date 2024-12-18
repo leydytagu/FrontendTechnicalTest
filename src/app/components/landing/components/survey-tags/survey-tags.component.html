@@ -4,9 +4,9 @@
   </div>
   <div class="survey-tags__wrapper">
     <div class="survey-tags__head">
-      <strong>{{surveyTags?.head?.title}}</strong>
+      <strong>{{ surveyTags?.head?.title }}</strong>
       <small *ngIf="surveyTags?.head?.description"></small>
-      <p  *ngIf="surveyTags?.head?.description">{{surveyTags?.head?.description}}</p>
+      <p *ngIf="surveyTags?.head?.description">{{ surveyTags?.head?.description }}</p>
     </div>
     <div class="survey-tags__content">
       <app-tag [image]="surveyTags?.tag?.img || ''"
@@ -16,7 +16,10 @@
                class="flex-1"
       ></app-tag>
       <app-tooltip [text]="surveyTags?.target?.tooltip || ''" *ngIf="hasTarget">
-        <app-target [icon]="surveyTags?.target?.icon || ''" [text]="surveyTags?.target?.text || ''"></app-target>
+        <app-target
+          [icon]="surveyTags?.target?.icon || ''" [text]="surveyTags?.target?.text || ''"
+          [color]="surveyTags?.tag?.color">
+        </app-target>
       </app-tooltip>
     </div>
   </div>

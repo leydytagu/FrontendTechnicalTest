@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { ESurveyTagColor } from '../../../../core/models/group.model';
 
 @Component({
   selector: 'app-target',
@@ -13,7 +14,7 @@ import { NgIf } from '@angular/common';
 export class TargetComponent {
   @Input() text = '';
   @Input() icon = '';
-  @Input() color : 'red' | 'magenta' = 'red';
+  @Input() color?: ESurveyTagColor = ESurveyTagColor.red;
 
   get hasText(): boolean {
     return !!this.text;
