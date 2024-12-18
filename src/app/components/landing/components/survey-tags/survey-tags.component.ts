@@ -1,6 +1,6 @@
 import { NgIf, NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ESurveyTagColor, ESurveyTagText } from '../../../../core/models/group.model';
+import { ESurveyTagColor, ESurveyTagText } from '../../../../core/models/group.enum';
 
 import { TagComponent } from '../../../../shared/design-system/atoms/tag/tag.component';
 import { TargetComponent } from '../../../../shared/design-system/atoms/target/target.component';

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EProgressBarColor } from '../../../../core/models/group.model';
+import { EProgressBarColor } from '../../../../core/models/group.enum';
 
 @Component({
   selector: 'app-progress-bar',

@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { EResponseColor, ETooltipColor } from '../../../../core/models/group.model';
+import { EResponseColor, ETooltipColor } from '../../../../core/models/group.enum';
 
 @Component({
   selector: 'app-count-tooltip',

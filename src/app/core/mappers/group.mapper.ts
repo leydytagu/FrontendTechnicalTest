@@ -3,10 +3,9 @@ import {
   EResponseColor,
   ESurveyTagColor,
   ESurveyTagText,
-  ETooltipColor,
-  Group,
-  IGroup
-} from '../models/group.model';
+  ETooltipColor
+} from '../models/group.enum';
+import { Group, IGroup } from '../models/group.model';
 
 export const mapGroups = (groups: Group[]): IGroup[] => {
   return groups.map(group => {

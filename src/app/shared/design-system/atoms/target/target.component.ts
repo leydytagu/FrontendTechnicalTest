@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ESurveyTagColor } from '../../../../core/models/group.model';
+import { ESurveyTagColor } from '../../../../core/models/group.enum';
 
 @Component({
   selector: 'app-target',
