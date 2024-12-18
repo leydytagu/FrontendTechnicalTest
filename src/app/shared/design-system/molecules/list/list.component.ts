@@ -17,6 +17,10 @@ export class ListComponent {
   @Input() listNumber: string = '';
   @Input() tooltip: string = '';
   @Input() buttonIcon: string = '';
+  @Input() textCopy: string = '';
+  @Input() delayCopy: number = 5000;
+
+  private _showCopy = false;
 
   get hasText(): boolean {
     return !!this.text;
@@ -28,6 +32,23 @@ export class ListComponent {
 
   get hasButtonIcon(): boolean {
     return !!this.buttonIcon;
+  }
+
+  get hasTextCopy(): boolean {
+    return !!this.textCopy;
+  }
+
+  get showCopy(): boolean {
+    return this._showCopy;
+  }
+
+  public clickButton(): void {
+    if (this.hasTextCopy) {
+      this._showCopy = true;
+      setTimeout(() => {
+        this._showCopy = false;
+      }, this.delayCopy);
+    }
   }
 
 }

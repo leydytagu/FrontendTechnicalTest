@@ -62,4 +62,38 @@
     }
   }
 
+  &__copy {
+    position: absolute;
+    padding: 10px 10px 10px 35px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    bottom: 4px;
+    left: 50%;
+    background: var(--color-magenta-500);
+    color: var(--color-white-700);
+    transform: translate(-50%, 120%);
+    border-radius: 6px;
+    transition: 0.3s;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    align-items: center;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      z-index: 4;
+    }
+    i {
+      font-size: toRem(35);
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    p {
+      white-space: nowrap;
+    }
+  }
+
 }

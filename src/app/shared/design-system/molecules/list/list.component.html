@@ -5,9 +5,17 @@
   </div>
   <div *ngIf="hasButtonIcon" class="list__right">
     <app-tooltip [text]="tooltip">
-      <button type="button">
+      <button type="button"
+              (click)="clickButton()">
         <i class="{{buttonIcon}}"></i>
       </button>
+      <div class="list__copy"
+           [class.show]="showCopy"
+           *ngIf="hasTextCopy"
+           type="button">
+        <i class="icon-check-mark"></i>
+        <p>{{textCopy}}</p>
+      </div>
     </app-tooltip>
   </div>
 </div>
