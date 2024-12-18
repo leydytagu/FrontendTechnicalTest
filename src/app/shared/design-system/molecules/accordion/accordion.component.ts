@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TooltipComponent } from '../../atoms/tooltip/tooltip.component';
 
 @Component({
@@ -15,8 +15,13 @@ export class AccordionComponent {
   @Input() tooltip: string = '';
   @Input() alternativeTooltip: string = '';
 
+  @Output() isShowDetails = new EventEmitter();
+
   public toggle(): void {
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.isShowDetails.emit();
+    }
   }
 
   get tooltipText(): string {

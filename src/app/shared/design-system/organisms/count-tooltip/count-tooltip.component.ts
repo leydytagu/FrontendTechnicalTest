@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { EResponseColor, ETooltipColor } from '../../../../core/models/group.enum';
 
 @Component({
@@ -24,6 +24,8 @@ export class CountTooltipComponent {
     colorIcon: ETooltipColor
   }
 
+  @Output() clickOnTooltip = new EventEmitter();
+
   public showTooltip: boolean = false;
 
   get hasLabel(): boolean {
@@ -40,6 +42,9 @@ export class CountTooltipComponent {
 
   public toggleTooltip(): void {
     this.showTooltip = !this.showTooltip;
+    if (this.showTooltip) {
+      this.clickOnTooltip.emit();
+    }
   }
 
 }

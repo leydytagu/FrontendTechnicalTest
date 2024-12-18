@@ -1,6 +1,7 @@
 <section class="landing">
   @for (group of groups; track group.id) {
-    <app-accordion tooltip="Show Details" alternativeTooltip="Hide Details">
+    <app-accordion tooltip="Show Details" alternativeTooltip="Hide Details"
+                   (isShowDetails)="sendEventOnShowDetails()">
       <div head>
         <div class="flex align-center justify-stretch">
           <app-accordion-head [props]="group.headData"></app-accordion-head>

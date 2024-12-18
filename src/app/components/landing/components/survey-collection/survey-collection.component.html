@@ -3,20 +3,22 @@
   <app-info-date
     img="./assets/imgs/SurveyDate.svg"
     title="Planned Check-In Survey Date"
-    [description]="surveyCollection.date"
-  ></app-info-date>
+    [description]="surveyCollection.date">
+  </app-info-date>
   <div class="survey-collection__counts">
     <app-count-tooltip
       [text]="surveyCollection.validResponses.quantity.toString()"
       [label]="surveyCollection.validResponses.label"
       [tooltip]="surveyCollection.validResponses.tooltip"
       [textColor]="surveyCollection.validResponses.color"
+      (clickOnTooltip)="sendEventOnClickValidResponses()"
     ></app-count-tooltip>
     <app-count-tooltip
       [text]="surveyCollection.responseTarget.quantity.toString()"
       [label]="surveyCollection.responseTarget.label"
       [tooltip]="surveyCollection.responseTarget.tooltip"
       [textColor]="surveyCollection.responseTarget.color"
+      (clickOnTooltip)="sendEventOnClickResponseTarget()"
     ></app-count-tooltip>
   </div>
   <app-progress-bar
