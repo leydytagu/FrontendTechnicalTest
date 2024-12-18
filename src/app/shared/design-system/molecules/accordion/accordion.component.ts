@@ -13,8 +13,13 @@ import { TooltipComponent } from '../../atoms/tooltip/tooltip.component';
 export class AccordionComponent {
   @Input() isOpen: boolean = false;
   @Input() tooltip: string = '';
+  @Input() alternativeTooltip: string = '';
 
   public toggle(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  get tooltipText(): string {
+    return this.isOpen ? this.alternativeTooltip : this.tooltip;
   }
 }
